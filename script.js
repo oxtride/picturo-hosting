@@ -1,6 +1,6 @@
 // Инициализация Supabase
 const supabaseUrl = 'https://mzusufzbtfsjlplojqnl.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16dXN1ZnpidGZzamxwbG9qcW5sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDUxNTE1MjcsImV4cCI6MjA2MDcyNzUyN30.2OyYTguulPKaqT3RU_Yw5_s-YL-f55Yyy7Ok-CL7ASM';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16dXN1ZnpidGZzamxwbG9qcW5sIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NTE1MTUyNywiZXhwIjoyMDYwNzI3NTI3fQ.ROY7eMFxSGRWXzs_-FtKdOwLKj1M0zCwXvo0EkhSRw4';
 const supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
 // DOM элементы
