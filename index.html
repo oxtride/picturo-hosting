@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictura | Фотохостинг</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-spinner"></div>
+    </div>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Pictura</a>
+                <div class="nav-links">
+                    <a href="#" class="nav-link active">Главная</a>
+                    <a href="#" class="nav-link">Галерея</a>
+                </div>
+                <div class="auth-buttons">
+                    <button id="loginBtn" class="btn btn-login">Войти</button>
+                    <button id="logoutBtn" class="btn btn-primary" style="display: none;">Выйти</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="authModal" class="auth-modal">
+        <div class="auth-content">
+            <span class="close-auth">&times;</span>
+            <h2>Вход / Регистрация</h2>
+            <input type="email" id="email" placeholder="Ваш email">
+            <input type="password" id="password" placeholder="Пароль">
+            <button id="signInBtn" class="btn-auth">Войти</button>
+            <button id="signUpBtn" class="btn-auth btn-auth-secondary">Зарегистрироваться</button>
+            <p id="authError" class="auth-error"></p>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Делитесь своими моментами</h1>
+                    <p class="hero-subtitle">Простой и удобный хостинг изображений</p>
+                    
+                    <div id="uploadArea" class="upload-area">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <p>Перетащите сюда фото или <span class="browse-link">выберите файлы</span></p>
+                        <input type="file" id="fileInput" accept="image/*" multiple>
+                    </div>
+                    
+                    <div id="uploadProgress" class="upload-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <span class="progress-text">Загрузка...</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Последние загрузки</h2>
+                </div>
+                <div id="galleryGrid" class="gallery-grid">
+                    <!-- Здесь будут отображаться фото -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Pictura</a>
+                    <p class="footer-text">Простой и удобный хостинг изображений</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Сервис</h4>
+                        <a href="#">Главная</a>
+                        <a href="#">Галерея</a>
+                        <a href="#">О нас</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Помощь</h4>
+                        <a href="#">FAQ</a>
+                        <a href="#">Правила</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Pictura. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
